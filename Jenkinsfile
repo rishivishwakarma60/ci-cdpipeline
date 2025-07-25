@@ -3,10 +3,11 @@ pipeline {
 
     stages {
         stage('Clone Repository') {
-            steps {
-                git 'https://github.com/rishivishwakarma60/ci-cdpipeline.git'
-            }
-        }
+    steps {
+        git branch: 'main', url: 'https://github.com/rishivishwakarma60/ci-cdpipeline.git'
+    }
+}
+
 
         stage('Compile Java') {
             steps {
